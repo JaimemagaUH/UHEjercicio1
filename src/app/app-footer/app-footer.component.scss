@@ -1,0 +1,22 @@
+.app-footer {
+    padding: 50px;
+    display: flex;
+    margin-top: 50px;
+    justify-content: space-around;
+    background-color: #e62429;
+    align-items: center;
+    font-family: Roboto, Trebuchet MS,Helvetica,Arial,sans-serif;
+    box-sizing: border-box;
+
+    &__link {
+        text-decoration: none;
+        color: white;
+        font-size: 18px;
+        font-weight: medium;
+
+        &:hover {
+            font-weight: bold;
+            text-decoration: underline;
+        }
+    }
+}

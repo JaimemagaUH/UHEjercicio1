@@ -1,0 +1,97 @@
+@import "src/styles/styles";
+
+:host {
+    margin-top: 104px;
+    width: 100%;
+}
+
+.app-list {
+    margin-top: 50px;
+    width: 100%;
+    padding: 50px;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    cursor: pointer;
+    font-family: RobotoCondensed,Trebuchet MS,Helvetica,Arial,sans-serif;
+
+    &__element {
+        width: 200px;
+        background-color: $primary-color;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+
+        &:not(:last-of-type) {
+            margin: 0px 5px 25px;
+        }
+
+        &:hover {
+            opacity: 0.8;
+        }
+
+        &--active {
+            background-color: $secondary-color;
+
+            & .avenger__name,
+            & .avenger__link {
+                color: white;
+            }
+        }
+    }
+
+    &__active-elements {
+        width: 100%;
+        box-sizing: border-box;
+        text-align: center;
+    }
+}
+
+.avenger {
+
+    &__thumbnail {
+        position: relative;
+        height: 210px;
+        overflow: hidden;
+        padding: 0;
+    }
+
+    &__img {
+        height: 100%;
+        width: 100%;
+        position: relative;
+        transform: scaleX(1);
+        object-position: top center;
+        overflow: hidden;
+        object-fit: cover;
+    }
+
+    &__info {
+        padding: 16px;
+        position: relative;
+        padding-bottom: 40px;
+        flex: 1;
+    }
+
+    &__hero {
+        color: white;
+        font-weight: bold;
+        font-size: 16px;
+        font-family: RobotoCondensed,Trebuchet MS,Helvetica,Arial,sans-serif;
+    }
+
+    &__name,
+    &__link {
+        color: #bbb;
+        margin-top: 12px;
+        font-size: 12px;
+        font-weight: bold;
+        font-family: RobotoCondensed,Trebuchet MS,Helvetica,Arial,sans-serif;
+    }
+
+    &__link {
+        position: absolute;
+        bottom: 8px;
+    }
+}
